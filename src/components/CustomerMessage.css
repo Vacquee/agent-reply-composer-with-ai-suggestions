@@ -1,0 +1,32 @@
+.customer-message {
+  background: #f5f6f8;
+  border: 1px solid #dde1e7;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.customer-message__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-message__header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.customer-message__time {
+  font-size: 0.8rem;
+  color: #5b6472;
+  white-space: nowrap;
+}
+
+.customer-message__body {
+  margin: 0;
+  line-height: 1.5;
+  color: #1f2430;
+  white-space: pre-wrap;
+}
