@@ -1,0 +1,58 @@
+.tone-picker {
+  display: flex;
+  gap: 4px;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--panel-border);
+}
+
+.tone-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.tone-tab:hover {
+  color: var(--ink);
+}
+
+.tone-tab--active {
+  background: var(--panel);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(28, 33, 41, 0.08);
+}
+
+.tone-tab__confidence {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.tone-tab__confidence--high {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.tone-tab__confidence--medium {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.tone-tab__confidence--low {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
