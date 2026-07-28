@@ -1,75 +1,88 @@
-# React + TypeScript + Vite
+# Agent Reply Composer with AI Suggestions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small front-end application built with **React**, **TypeScript**, and **Vite** that demonstrates an AI-assisted workflow for customer support agents.
 
-Currently, two official plugins are available:
+This project was created as part of the **FlyRank Front-End AI Engineering** assignment to compare the effectiveness of vague versus precise AI prompting during software development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Project Goal
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application helps customer support agents respond faster by generating AI-assisted reply drafts that agents can review, edit, and send.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Assignment Objective
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The same feature was implemented twice:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Round 1** – Single vague prompt
+- **Round 2** – Detailed engineering prompt with:
+  - project exploration
+  - implementation constraints
+  - expected behavior
+  - accessibility requirements
+  - automated testing
+  - verification
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The goal was to compare how prompt quality affects software quality, correctness, accessibility, architecture, and review effort.
 
+---
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Vitest
+- React Testing Library
+
+---
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Run the test suite:
+
+```bash
+npm run test
+```
+
+---
+
+## Repository Structure
 
 ```
+src/
+components/
+hooks/
+services/
+tests/
+
+WORKFLOW.md
+CLAUDE.md
+```
+
+---
+
+## Documentation
+
+- `WORKFLOW.md` – Comparison between vague and precise prompting.
+- `CLAUDE.md` – Project-specific engineering rules established during development.
+
+---
+
+## Author
+
+Jerge Vacque Esteria
